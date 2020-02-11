@@ -37,7 +37,7 @@ class ChatViewController: UIViewController {
     @IBAction func sendChat(_ sender: UIButton) {
         myDb.collection("chatData").document("\(UserDefaults.standard.string(forKey: "user"))_\(destination?.email)").setData(["test" : listChat])
     }
-
+    
 }
 extension ChatViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
